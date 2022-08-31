@@ -5,26 +5,25 @@ const recordSchema = new Schema ({
     type: String,
     required: true,
   },
-  date: {
-    type: String,
+  createdAt: {
+    type: Date,
     required: true,
   },
   amount: {
-    type: String,
-    required: true,
-  }, 
-  userId: {
-    type: Schema.Types.ObjectID,
-    ref: 'User',
-    index: true,
+    type: Number,
     required: true,
   }, 
   categoryId: {
-    type: Schema.Types.ObjectID,
-    ref: 'Category',
+    type: Number,
+    required: true,
+  },
+  userId: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
     index: true,
     required: true,
   }
+
 })
 
 module.exports = mongoose.model('Record', recordSchema)

@@ -1,0 +1,43 @@
+<from action="/records" method="POST">
+
+<div class="mt-2">
+  <label class="label" for="name">必填欄位</label>
+  <label class="label" for="name">請輸入你的支出</label>
+</div>
+
+
+<div class="mt-2">
+  <label class="label" for="name">名稱</label>
+  <input type="text" placeholder="輸入名稱..." name="name" id="name" class="input-space" required>
+</div>
+
+<div class="mt-2">
+  <label class="label" for="date">日期</label>
+  <input type="date" placeholder="輸入日期..." name="date" id="date" class="input-space" required>
+</div>
+
+<div class="mt-2">
+  <label class="label" for="category">類別</label>
+  <input type="text" placeholder="輸入類別..." list="categoryOptions" name="category" id="category" class="input-space"
+        required>
+    <datalist id="categoryOptions">
+      <option>家居物業</option>
+      <option>交通出行</option>
+      <option>休閒娛樂</option>
+      <option>餐飲食品</option>
+      <option>其他</option>
+    </datalist>
+</div>
+
+
+<div class="mt-2">
+  <label class="label" for="amount">金額:</label>
+  <input type="text" placeholder="輸入金額..." name="amount" id="amount" class="input-space" required>
+</div>
+
+
+ 
+<button type="submit">新增支出</button>
+
+
+</from>
