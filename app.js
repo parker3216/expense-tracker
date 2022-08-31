@@ -1,4 +1,5 @@
 const express = require('express')
+const session = require('express-session')
 const exphbs = require('express-handlebars')
 const Record = require('./models/record')
 require('./config/mongoose')
@@ -19,7 +20,11 @@ app.use(express.urlencoded({ extended: true})) // setting body-parser
 const PORT = 3000
 
 
-
+app.use(session({
+  secret: "GreatThing",
+  resave: false,
+  saveUninitialized: true
+}))
 
 
 
