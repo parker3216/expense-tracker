@@ -64,6 +64,10 @@ router.post('/register' ,(req,res) =>{
 
 })
 
+router.get('/logout', (res,req) => {
+  req.logout()
+  res.redirect('/users/login')
+})
 
 
 
