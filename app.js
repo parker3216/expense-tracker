@@ -1,8 +1,12 @@
 const express = require('express')
 const session = require('express-session')
+const usePassport = require('./config/passport')
 const exphbs = require('express-handlebars')
 const Record = require('./models/record')
 require('./config/mongoose')
+
+usePassport(app) 
+
 
 const routes = require('./routes')
 
