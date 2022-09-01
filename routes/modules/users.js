@@ -5,12 +5,18 @@ const passport = require('passport')
 
 
 router.get('/login' , (req,res) =>{
-  res.render('login')
+  const errorMessage = req.flash('error')
+  const errors = []
+  if (errorMessage.length) {
+    errors.push({ message:errorMessage})
+  }
+  res.render('login', {errors})
 })
 
 router.post('/login', passport.authenticate('local',{
   successRedirect:'/',
-  failureRedirect:'/users/login'  
+  failureRedirect:'/users/login',
+  failureFlash: true
 }))
 
 router.get('/register', (req, res) => {
@@ -20,7 +26,7 @@ router.get('/register', (req, res) => {
 router.post('/register' ,(req,res) =>{
   const { name , email , password , confirmPassword} = req.body
   const errors = []
-  if(!email || !password || !confirmPassword) {
+  if(!name || !email || !password || !confirmPassword) {
     errors.push({ message:'所有欄位都是必填！'})
   }
   if( password !== confirmPassword) {
@@ -36,7 +42,7 @@ router.post('/register' ,(req,res) =>{
     })
   }
 
-  User,findOne({ email })
+  User.findOne({ email })
   .then(user => {
     if(user) {
       errors.push({ message: '此Email已註冊過' })
