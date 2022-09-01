@@ -3,6 +3,7 @@ const LocalStrategy = require('passport-local').Strategy
 const User = require('../models/user')
 const bcrypt = require('bcryptjs')
 
+//本地登入
 module.exports = app => {
   app.use(passport.initialize())
   app.use(passport.session())
@@ -23,7 +24,7 @@ module.exports = app => {
     })
       .catch(err => done(err,false))   
   }))
-
+  
   passport.serializeUser((user, done) => {
     done(null, user.id)
   })
@@ -33,7 +34,4 @@ module.exports = app => {
     .then(user => done(null, user))
     .catch(err => done(err,null))
   })
-
-
-
 }
