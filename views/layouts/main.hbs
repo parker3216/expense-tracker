@@ -5,23 +5,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+  <script src="https://kit.fontawesome.com/1b2d9e59ac.js" crossorigin="anonymous"></script>
+  
+  <title>expense tracker</title>
 
-
-
-
-  <title>家庭記帳本</title>
 </head>
+
 <body class="bg-light">
   <header>
     <nav class="navbar navbar-dark bg-primary justify-content-between">
     <a class="navbar-brand" href="/">
-    {{#if isAuthenticated}}{{user.name}}'s {{/if}}
+    {{#if isAuthenticated}}{{user.name}} {{/if}}
     家庭記帳本
     </a>
     {{#if isAuthenticated}}
-    <a href="/users/logout" class="btn btn-outline-light">Logout</a>
+    <a href="/users/logout" class="btn btn-warning">登出</a>
     {{else}}
-    <a href="/users/login" class="btn btn-outline-light">Logoin</a>
+    <a href="/users/login" class="btn btn-warning">登入</a>
     {{/if}}
     </nav>
   </header>
@@ -30,5 +30,6 @@
   {{{ body }}}
 
 <script src="/javascripts/bootstrap.js"></script>
+
 </body>
 </html>

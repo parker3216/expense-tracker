@@ -1,0 +1,44 @@
+[
+  {
+    "name": "買抹布",
+    "date": "2022-06-24",
+    "amount": 100,
+    "categoryID": 1,
+    "categoryIcon": "fa-solid fa-house"
+  },
+  {
+    "name": "搭捷運",
+    "date": "2022-06-23",
+    "amount": 150,
+    "categoryID": 2,
+    "categoryIcon": "fa-solid fa-van-shuttle"
+  },
+  {
+    "name": "看畫展",
+    "date": "2022-06-21",
+    "amount": 175,
+    "categoryID": 3,
+    "categoryIcon": "fa-solid fa-face-grin-beam"
+  },
+  {
+    "name": "吃牛排",
+    "date": "2022-06-15",
+    "amount": 210,
+    "categoryID": 4,
+    "categoryIcon": "fa-solid fa-utensils"
+  },
+  {
+    "name": "買筆記本",
+    "date": "2022-05-20",
+    "amount": 70,
+    "categoryID": 5,
+    "categoryIcon": "fa-solid fa-pen"
+  },
+  {
+    "name": "買書櫃",
+    "date": "2022-05-15",
+    "amount": 2500,
+    "categoryID": 1,
+    "categoryIcon": "fa-solid fa-house"
+  }
+]

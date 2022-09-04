@@ -1,43 +1,43 @@
-<from action="/records" method="POST">
+<div class="container-fluid mt-5">
+<div class="container" style="width:300px;">
 
-<div class="mt-2">
-  <label class="label" for="name">必填欄位</label>
-  <label class="label" for="name">請輸入你的支出</label>
+<form action="/records" method="POST" >
+
+<div class="mb-4">
+  <label class="label" for="name" style="font-size: 10px;">必填欄位*</label>
+  <label class="text-center" for="name" style="width: 200px; font-size: 25px" >請輸入你的支出</label>
 </div>
 
-
-<div class="mt-2">
-  <label class="label" for="name">名稱</label>
-  <input type="text" placeholder="輸入名稱..." name="name" id="name" class="input-space" required>
+<div class="mb-4">
+  <label class="label" for="name" style="width: 50px;">名稱* :</label>
+  <input type="text" placeholder="輸入名稱..." name="name" id="name" class="mb-3 mx-3"  required>
 </div>
 
-<div class="mt-2">
-  <label class="label" for="date">日期</label>
-  <input type="date" placeholder="輸入日期..." name="date" id="date" class="input-space" required>
+<div class="mb-4">
+  <label class="label" for="date" style="width: 50px;">日期* :</label>
+  <input type="date" name="date" id="date" class="mb-3 mx-3" style="width: 180px; height: 30px;" required>
 </div>
-
-<div class="mt-2">
-  <label class="label" for="category">類別</label>
-  <input type="text" placeholder="輸入類別..." list="categoryOptions" name="category" id="category" class="input-space"
-        required>
-    <datalist id="categoryOptions">
-      <option>家居物業</option>
-      <option>交通出行</option>
-      <option>休閒娛樂</option>
-      <option>餐飲食品</option>
-      <option>其他</option>
-    </datalist>
-</div>
-
-
-<div class="mt-2">
-  <label class="label" for="amount">金額:</label>
-  <input type="text" placeholder="輸入金額..." name="amount" id="amount" class="input-space" required>
-</div>
-
-
  
-<button type="submit">新增支出</button>
+<div class="mb-4">
+  <label class="label" for="category" style="width: 50px;">類別* :</label>
+  <select name="category" id="category" class="mb-3 mx-3" style="width: 180px; height: 30px;" required>
+          <option value="0" selected disabled>Select</option>
+          <option value="1">家居物業</option>
+          <option value="2">交通出行</option>
+          <option value="3">休閒娛樂</option>
+          <option value="4">餐飲食品</option>
+          <option value="5">其他</option>
+    </select>
+</div>
 
+<div class="mb-4">
+  <label class="label" for="amount"  style="width: 50px;">金額* :</label>
+  <input type="text" placeholder="輸入金額..." name="amount" id="amount" class="mb-3 mx-3" required>
+</div>
 
-</from>
+<div class="d-flex justify-content-center "><button type="submit" class="btn btn-primary">新增支出</button>
+</div>
+
+</form>
+</div>
+</div>
