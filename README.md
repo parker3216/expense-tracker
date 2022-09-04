@@ -40,4 +40,3 @@ App is running on http://localhost:3000
 mongodb connected
  ```
 8.開啟瀏覽器網址列輸入 http://localhost:3000/ 即可看到本專案的網頁呈現
-![image](https://user-images.githubusercontent.com/65106895/188298345-f6e4e22c-7227-41a7-a80a-5fe47c1510e4.png)
